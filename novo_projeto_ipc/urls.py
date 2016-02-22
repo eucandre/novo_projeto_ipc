@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from ipc_novo_app.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url()
+    url(r'^$','ipc_novo_app.views.pagina_inicial'),
 ]
