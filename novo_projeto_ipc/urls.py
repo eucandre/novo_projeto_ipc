@@ -15,9 +15,22 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import patterns, include, url
+from django.conf import settings
+
+
 from ipc_novo_app.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$','ipc_novo_app.views.pagina_inicial'),
+    url(r'^sub_produtos/$','ipc_novo_app.views.registra_grupos'),
+    url(r'^login/$',"django.contrib.auth.views.login",{"template_name":"paginas_do_sistema/login.html"}),
+    url(r'^logout/$',"django.contrib.auth.views.logout_then_login",{"login_url":"/login/"}),
+
+
 ]
+urlpatterns += patterns('',
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+            'document_root': settings.MEDIA_ROOT,
+        }))
