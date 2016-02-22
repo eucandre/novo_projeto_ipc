@@ -31,6 +31,7 @@ class FormItem(forms.ModelForm):
         fields = ['nome_item',]
 
 class FormSubitem(forms.ModelForm):
+    item_relacionado = forms.ModelChoiceField(queryset=item.objects.all(),widget=forms.Select(attrs={"class":"form-control","required":"required"}))
     class Meta:
         model = subitem
         fields = ['nome_subitem','peso_subitem','item_relacionado']

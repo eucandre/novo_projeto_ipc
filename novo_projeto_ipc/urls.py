@@ -25,8 +25,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$','ipc_novo_app.views.pagina_inicial'),
     url(r'^sub_produtos/$','ipc_novo_app.views.registra_grupos'),
-    url(r'^pesos_grupos/$','ipc_novo_app.views.pesos_grupos'),
+    url(r'^pesos_grupo/$','ipc_novo_app.views.pesos_grupos'),
     url(r'^reg_item/$','ipc_novo_app.views.registra_itens'),
+    url(r'^pesos_item/$','ipc_novo_app.views.pesos_subitens'),
     url(r'^login/$',"django.contrib.auth.views.login",{"template_name":"paginas_do_sistema/login.html"}),
     url(r'^logout/$',"django.contrib.auth.views.logout_then_login",{"login_url":"/login/"}),
 

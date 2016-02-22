@@ -39,3 +39,12 @@ def registra_itens(request):
     else:
         form= FormItem()
     return render_to_response("paginas_do_sistema/registra_itens.html",{"form":form}, context_instance = RequestContext(request))
+
+def pesos_subitens(request):
+    if request.method=="POST":
+        form = FormSubitem(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+    else:
+        form= FormSubitem()
+    return render_to_response("paginas_do_sistema/registra_subitem.html",{"form":form}, context_instance = RequestContext(request))
