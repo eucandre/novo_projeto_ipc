@@ -1,0 +1,55 @@
+{% extends 'arquivo_auxiliar/base.html' %}
+{% block corpo_1 %}
+ <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Formulário <small>pesos de subgrupo</small></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <br>
+                                    <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nome do subgrupo <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" id="id_nome_subgrupo" required="required" class="form-control col-md-7 col-xs-12" data-parsley-id="4412"><ul class="parsley-errors-list" id="parsley-id-4412"></ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Peso do subgrupo <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="number" id="id_peso_subgrupo" name="last-name" required="required" class="form-control col-md-7 col-xs-12" data-parsley-id="4316"><ul class="parsley-errors-list" id="parsley-id-4316"></ul>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Grupo relacionado <span class="required">*</span></label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                {{ form.grupo_relacionado }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+
+                                        </div>
+
+                                        <div class="ln_solid"></div>
+                                        <div class="form-group">
+                                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                                <button type="reset" class="btn btn-primary">Cancelar</button>
+                                                <button type="submit" class="btn" value="/">Enviar</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+{% endblock %}
+
