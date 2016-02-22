@@ -14,7 +14,7 @@
                                 </div>
                                 <div class="x_content">
                                     <br>
-                                    <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+                                    <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="" action="" method="post">
 
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nome do subgrupo <span class="required">*</span>
@@ -24,14 +24,14 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Peso do subgrupo <span class="required">*</span>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="id_peso_subgrupo">Peso do subgrupo <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="number" id="id_peso_subgrupo" name="last-name" required="required" class="form-control col-md-7 col-xs-12" data-parsley-id="4316"><ul class="parsley-errors-list" id="parsley-id-4316"></ul>
+                                                <input type="number" id="id_peso_subgrupo" name="Peso do subgrupo" required="required" class="form-control col-md-7 col-xs-12" data-parsley-id="4316"><ul class="parsley-errors-list" id="parsley-id-4316"></ul>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Grupo relacionado <span class="required">*</span></label>
+                                            <label for="id_grupo_relacionado" class="control-label col-md-3 col-sm-3 col-xs-12">Grupo relacionado <span class="required">*</span></label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 {{ form.grupo_relacionado }}
                                             </div>
@@ -44,7 +44,7 @@
                                         <div class="form-group">
                                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                                 <button type="reset" class="btn btn-primary">Cancelar</button>
-                                                <button type="submit" class="btn" value="/">Enviar</button>
+                                                <button type="submit" class="btn btn-success" value="/">Enviar</button>
                                             </div>
                                         </div>
 

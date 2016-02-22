@@ -1,11 +1,9 @@
 {% extends 'arquivo_auxiliar/base.html' %}
-{% block titulo_pagina%}Pesos dos grupos{% endblock %}
-{% block usuario %}<span style="font-weight: bolder;">{{ usuario }}</span>{% endblock %}
-
-{% block corpo_1 %}
- <div class="x_panel">
+{% block titulo_pagina%}Pesos dos ítens{% endblock %}
+{% block corpo_1%}
+     <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>Formulário <small>pesos de grupo</small></h2>
+                                    <h2>Formulário <small>catalogação dos ítens</small></h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
@@ -20,15 +18,11 @@
                                     <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="" action="" method="post">
                                         {% csrf_token %}
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="id_grupo">Grupo <span class="required">*</span>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="id_nome_item"> Ítem <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                {{ form.grupo }}
+                                                {{ form.nome_item }}
                                             </div>
-                                        </div>
-
-                                        <div class="form-group">
-
                                         </div>
 
                                         <div class="ln_solid"></div>

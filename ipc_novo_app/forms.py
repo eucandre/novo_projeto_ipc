@@ -25,6 +25,7 @@ class FormSubgrupo(forms.ModelForm):
         fields = ['nome_subgrupo', 'peso_subgrupo','grupo_relacionado']
 
 class FormItem(forms.ModelForm):
+    nome_item = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control"}))
     class Meta:
         model = item
         fields = ['nome_item',]
