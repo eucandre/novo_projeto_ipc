@@ -20,6 +20,8 @@ from django.conf import settings
 
 
 from ipc_novo_app.views import *
+from rotas_app.views import *
+from perfis.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -28,6 +30,11 @@ urlpatterns = [
     url(r'^pesos_grupo/$','ipc_novo_app.views.pesos_grupos'),
     url(r'^reg_item/$','ipc_novo_app.views.registra_itens'),
     url(r'^pesos_item/$','ipc_novo_app.views.pesos_subitens'),
+
+    #--------- rotas ---------------
+    url(r'^estabelecimento/$','rotas_app.views.estabelecimento_cadastro'),
+    url(r'^rota/$','rotas_app.views.define_rota'),
+    url(r'^perfil/$','perfis.views.perfil_pesquisador'),
     url(r'^login/$',"django.contrib.auth.views.login",{"template_name":"paginas_do_sistema/login.html"}),
     url(r'^logout/$',"django.contrib.auth.views.logout_then_login",{"login_url":"/login/"}),
 

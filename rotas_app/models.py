@@ -17,13 +17,13 @@ class estabelecimento(models.Model):
         return self.NomeDoEstabeleciemento
     class Meta:
         verbose_name_plural = "Estabelecimento"
-        db_table = "estabalecimento"
+
 
 class rota(models.Model):
     Local_vizitar        = models.ForeignKey(estabelecimento)
     Pesquisador          = models.ForeignKey(perfil)
     data_vizita          = models.DateField()
-    grupo_para_pesquisa = models.ForeignKey(pesos_grupos)
+    grupo_para_pesquisa  = models.ForeignKey(pesos_grupos)
     SubGrupoParaPesquisa = models.ForeignKey(subgrupo)
     Item_pesquisado      = models.ForeignKey(item)
     #usuario              = models.ForeignKey(User)
