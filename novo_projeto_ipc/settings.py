@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'ipc_novo_app',
     'perfis',
     'rotas_app',
-    'rest_framework',
+    #'rest_framework',
 ]
 
 MIDDLEWARE_CLASSES = [
